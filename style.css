@@ -151,6 +151,35 @@ h1 {
     }
 }
 
+/* 4K */
+@media only screen and (min-width: 1585px) and (max-width: 9999px) {
+    h1 {
+        font-size: 3.6rem;
+    }
+    #main-container {
+        margin: 0 auto;
+        font-family: Poppins, sans-serif;
+        height: auto;
+        width: 483px;
+        border-radius: 15px;
+        background-color: white;
+        text-align: center;
+        z-index: 9999;
+        padding-top: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    #myVideo {
+        right: -0%;
+    }
+    #main-container {
+        width: 348px;
+    }
+    #summary {
+        height: 130px;
+    }
+}
+
 /* Tablet */
 
 @media only screen and (min-width: 470px) and (max-width: 845px) {
