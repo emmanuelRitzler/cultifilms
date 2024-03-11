@@ -162,9 +162,9 @@ imageArray = loadImagesFromLocalStorage();
 summaryArray = loadSummariesFromLocalStorage();
 
 // Get the stored values for title, summary and image to keep them after reloading
-const getFilmStored = sessionStorage.getItem('randomFilm');
-const getImageStored = sessionStorage.getItem('randomImage');
-const getSummaryStored = sessionStorage.getItem('randomSummary');
+const getFilmStored = localStorage.getItem('randomFilm');
+const getImageStored = localStorage.getItem('randomImage');
+const getSummaryStored = localStorage.getItem('randomSummary');
 
 // DOM elements for modifying the page
 const textFieldFilm = document.querySelector('#film-title');
@@ -179,7 +179,7 @@ function randomNumber() {
     return Math.floor(Math.random() * films.length);
 }
 
-let filmStored = sessionStorage.getItem('randomFilm')
+let filmStored = localStorage.getItem('randomFilm')
 if (filmStored === '') {
     summaryTitle.innerHTML = "C'était le dernier! Rajoutez des classiques et recommencez 🔄";
     summaryText.style.height = '0px';
@@ -188,14 +188,14 @@ if (filmStored === '') {
 }
 
 // Check if the random number is already stored in session storage
-let randomNum = sessionStorage.getItem('randomNum');
+let randomNum = localStorage.getItem('randomNum');
 
 console.log("Stored randomNum:", randomNum);
 
 if (randomNum === null || randomNum === "0" || isNaN(parseInt(randomNum)) || randomNum < 0 || randomNum >= films.length) {
     console.log("RandomNum is invalid, generating new randomNum.");
     randomNum = randomNumber();
-    sessionStorage.setItem('randomNum', randomNum);
+    localStorage.setItem('randomNum', randomNum);
 } else {
     console.log("Using stored randomNum.");
     randomNum = parseInt(randomNum);
@@ -254,10 +254,15 @@ filmButton.addEventListener('click', event => {
     
     const randomNum = randomNumber();
 
-    sessionStorage.setItem('randomNum', randomNum);
-    sessionStorage.setItem('randomFilm', films[randomNum]);
-    sessionStorage.setItem('randomImage', imageArray[randomNum]);
-    sessionStorage.setItem('randomSummary', summaryArray[randomNum]);
+    localStorage.setItem('randomNum', randomNum);
+    localStorage.setItem('randomFilm', films[randomNum]);
+    localStorage.setItem('randomImage', imageArray[randomNum]);
+    localStorage.setItem('randomSummary', summaryArray[randomNum]);
+
+    // sessionStorage.setItem('randomNum', randomNum);
+    // sessionStorage.setItem('randomFilm', films[randomNum]);
+    // sessionStorage.setItem('randomImage', imageArray[randomNum]);
+    // sessionStorage.setItem('randomSummary', summaryArray[randomNum]);
 
     const randomFilm = films[randomNum];
     if (randomFilm === undefined) {
@@ -275,9 +280,9 @@ filmButton.addEventListener('click', event => {
         let emptyImage = 'Images/clap.png';
         let emptySummary = '';
 
-        sessionStorage.setItem('randomFilm', emptyFilm);
-        sessionStorage.setItem('randomImage', emptyImage);
-        sessionStorage.setItem('randomSummary', emptySummary);
+        localStorage.setItem('randomFilm', emptyFilm);
+        localStorage.setItem('randomImage', emptyImage);
+        localStorage.setItem('randomSummary', emptySummary);
     }
     else {
         summaryText.innerHTML = randomSummary;
@@ -326,7 +331,7 @@ filmButton.addEventListener('click', event => {
     saveImagesToLocalStorage(imageArray);
 
     window.onload = function() {
-        const randomNum = sessionStorage.getItem('randomNum');
+        const randomNum = localStorage.getItem('randomNum');
     };
 })
 
@@ -508,8 +513,8 @@ const randomNum = randomNumber();
     summaryText.style.height = '110px';
 
     // Setting the stored dataset to the new generated array
-    sessionStorage.setItem('randomNum', randomNum);
-    sessionStorage.setItem('randomFilm', films[randomNum]);
-    sessionStorage.setItem('randomImage', imageArray[randomNum]);
-    sessionStorage.setItem('randomSummary', summaryArray[randomNum]);
+    localStorage.setItem('randomNum', randomNum);
+    localStorage.setItem('randomFilm', films[randomNum]);
+    localStorage.setItem('randomImage', imageArray[randomNum]);
+    localStorage.setItem('randomSummary', summaryArray[randomNum]);
 })
