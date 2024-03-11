@@ -162,6 +162,9 @@ h1 {
         margin-top: 42px;
         margin-bottom: 36px;
     }
+    #instruction {
+        font-size: 1.8rem;
+    }
     #main-container {
         /* margin: 0 auto; */
         font-family: Poppins, sans-serif;
@@ -178,25 +181,52 @@ h1 {
     #myVideo {
         right: -0%;
     }
-    /* #main-container {
-        width: 348px;
-    } */
+    #film-title {
+        font-size: 1.8rem;
+    }
+    #film-title-container {
+        height: 60px;
+        margin-top: 42px;
+        margin-bottom: 42px;
+    }
     #summary {
-        height: 130px;
+        height: 160px;
+        font-size: 0.9rem;
+        line-height: 26px;
+        margin-bottom: 104px;
+    }
+    #summary-title {
+        font-size: 1.5rem;
     }
     #image-container {
-        height: 160px;
-        width: 160px;
+        height: 220px;
+        width: 220px;
         margin-top: 16px;
     }
     #film-image {
-        height: 160px;
-        width: 160px;
+        height: 220px;
+        width: 220px;
+    }
+    #generate-film {
+        font-size: 1rem;
+        display: inline;
+        width: 180px;
+        height: 54px;
+        border-radius: 30px;
+        border: 1px solid black;
+        margin-bottom: 20px;
+    
+        &:hover {
+            cursor: pointer;
+        }
+        &:active,
+        &:focus {
+            color: black;
+        }
     }
 }
 
 /* Tablet */
-
 @media only screen and (min-width: 470px) and (max-width: 845px) {
     h1 {
         font-size: 3rem;
@@ -224,7 +254,6 @@ h1 {
 }
 
 /* Mobile */
-
 @media only screen and (min-width: 350px) and (max-width: 469px) {
     h1 {
         font-size: 2.3rem;
