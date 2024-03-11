@@ -201,20 +201,41 @@ h1 {
 
 @media only screen and (min-width: 350px) and (max-width: 469px) {
     h1 {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
     }
     #myVideo {
         right: -200%;
     }
     #main-container {
-        width: 294px;
+        width: 320px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     #summary {
         height: 150px;
-        margin-bottom: 68px;
+        margin-bottom: 124px;
+        font-size: 0.65rem;
+        line-height: 22px;
     }
     #film-title-container {
         width: 100%;
+    }
+    #generate-film {
+        font-size: 1rem;
+        display: inline;
+        width: 160px;
+        height: 42px;
+        border-radius: 30px;
+        border: 1px solid black;
+        margin-bottom: 20px;
+    
+        &:hover {
+            cursor: pointer;
+        }
+        &:active,
+        &:focus {
+            color: black;
+        }
     }
 }
 
