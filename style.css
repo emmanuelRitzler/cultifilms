@@ -144,6 +144,51 @@ h1 {
     }
 }
 
+#link-film {
+    font-size: 0.8rem;
+    display: inline;
+    width: 120px;
+    height: 24px;
+    border-radius: 15px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    transition: all 0.2s;
+    text-transform: none;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(249, 247, 247);
+    }
+
+    &:active,
+    &:focus {
+        color: black;
+    }
+}
+
+#link-film a {
+    font-size: 0.8rem;
+    display: inline;
+    width: 120px;
+    height: 24px;
+    margin-bottom: 20px;
+    transition: all 0.2s;
+    text-transform: none;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(249, 247, 247);
+    }
+
+    &:active,
+    &:focus {
+        color: black;
+    }
+}
+
+
 #refresh-button {
     font-size: 1.4rem;
     width: auto;
