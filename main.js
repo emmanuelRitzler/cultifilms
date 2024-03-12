@@ -176,6 +176,24 @@ const filmImage = document.querySelector('#film-image');
 const refreshButton = document.querySelector('#refresh-button');
 const mainTitle = document.querySelector('#main-title');
 
+if (window.location.href.endsWith('index.html')) {
+    filmButton.innerHTML = 'Choisir un film';
+    filmButton.style.display = 'inline';
+    summaryTitle.innerHTML = 'Synopsis';
+    summaryText.style.height = '110px';
+    filmImage.src = 'Images/clap.png';
+    textFieldFilm.innerHTML = 'Votre film ici';
+    textFieldFilm.style.color = 'rgba(0, 0, 0, 0.5)';
+    summaryTitle.innerHTML = '';
+    summaryText.innerHTML = '';
+    summaryText.style.display = 'none';    
+}
+
+if (window.location.href.endsWith('films.html')) {
+    filmButton.innerHTML = 'Prochain film';
+}
+
+
 //Getting a random number
 function randomNumber() {
     return Math.floor(Math.random() * films.length);
