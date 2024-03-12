@@ -204,6 +204,9 @@ function randomNumber() {
 const getFilmStored = localStorage.getItem('randomFilm');
 const getImageStored = localStorage.getItem('randomImage');
 const getSummaryStored = localStorage.getItem('randomSummary');
+console.log(getFilmStored);
+console.log(getImageStored);
+console.log(getSummaryStored);
 
 let filmStored = localStorage.getItem('randomFilm')
 if (filmStored === '') {
@@ -277,6 +280,10 @@ else {
 // Click event handling on filmButton
 filmButton.addEventListener('click', event => {
     event.preventDefault;
+
+    if (window.location.href.endsWith('index.html')) {
+        window.location = 'films.html';
+    }
 
     summaryText.style.display = 'inline';
     
@@ -551,8 +558,6 @@ const randomNum = randomNumber();
 })
 
 mainTitle.addEventListener('click', event => {
-    event.preventDefault;
-
     event.preventDefault;
 
     window.location.replace("index.html");
