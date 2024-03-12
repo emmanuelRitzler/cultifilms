@@ -142,6 +142,12 @@ h1 {
         cursor: pointer;
         background-color: rgb(249, 247, 247);
     }
+
+    &:active,
+    &:focus,
+    &:visited {
+        color: black;
+    }
 }
 
 #link-film {
@@ -183,21 +189,35 @@ h1 {
     }
 
     &:active,
-    &:focus {
+    &:focus,
+    &:visited {
         color: black;
     }
 }
 
 
 #refresh-button {
-    font-size: 1.4rem;
+    font-size: 2.4rem;
     width: auto;
-    height: 24px;
+    height: auto;
     border-radius: 15px;
     margin-bottom: 20px;
     border: none;
     background-color: transparent;
     display: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#link-homepage {
+    font-size: 2.4rem;
+    width: auto;
+    height: auto;
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
 
     &:hover {
         cursor: pointer;
@@ -239,10 +259,9 @@ h1 {
         margin-bottom: 42px;
     }
     #summary {
-        height: 160px;
+        height: 190px;
         font-size: 0.9rem;
         line-height: 26px;
-        margin-bottom: 104px;
     }
     #summary-title {
         font-size: 1.5rem;
@@ -268,11 +287,18 @@ h1 {
         &:hover {
             cursor: pointer;
         }
-        &:active,
-        &:focus {
-            outline: none;
-            color: black;
-        }
+    }
+    #link-film a {
+        font-size: 1rem;
+        width: 180px;
+        height: 54px;
+        border-radius: 30px;
+    }
+    #link-film {
+        font-size: 1.4rem;
+        width: 180px;
+        height: 54px;
+        border-radius: 30px;
     }
 }
 
@@ -322,8 +348,7 @@ h1 {
         padding-right: 20px;
     }
     #summary {
-        height: 150px;
-        margin-bottom: 124px;
+        height: 230px;
         font-size: 0.65rem;
         line-height: 22px;
     }
@@ -378,8 +403,7 @@ h1 {
         width: 255px;
     }
     #summary {
-        height: 150px;
-        margin-bottom: 104px;
+        height: 210px;
     }
     #film-title-container {
         width: 100%;
